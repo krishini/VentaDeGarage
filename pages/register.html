@@ -2,9 +2,10 @@
 <html lang="es-AR">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="/VentaDeGarage/css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="/VentaDeGarage/css/styles.css">
+  <link rel="stylesheet" href="/VentaDeGarage/css/form.css">
+  <title>Registro</title>
 </head>
 
 <!-- Register: Se deberá realizar formulario para registrar un nuevo usuario en nuestro ecommerce.
@@ -15,50 +16,155 @@
 -	Controlar los máximos y mínimos de longitud para nombre, email, contraseña, observación.
  -->
 <body>
- <!-- STICKY NAV -->
- <div class="nav-wrapper shadow-bottom">
-  <nav class="nav-left">
-    <a href="/VentaDeGarage/index.html" class="logo-link">
-      <img src="/VentaDeGarage/assets/venta-de-garage-logo-zip-file/svg/logo-no-background.svg" alt="logo-img" class="nav-logo">
-    </a>
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a class="nav-link" href="/VentaDeGarage/index.html">Inicio</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/VentaDeGarage/pages/nosotros.html">Nosotros</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/VentaDeGarage/pages/contacto.html">Contacto</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/VentaDeGarage/pages/register.html">Registro</a>
-      </li>
-      
-    </ul>
-  </nav>
+  <!-- STICKY NAV -->
+  <div class="nav-wrapper shadow-bottom">
+    <nav class="nav-left">
+      <a href="/VentaDeGarage/index.html" class="logo-link">
+        <img src="/VentaDeGarage/assets/venta-de-garage-logo-zip-file/svg/logo-no-background.svg" alt="logo-img" class="nav-logo">
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link" href="/VentaDeGarage/index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/VentaDeGarage/pages/nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/VentaDeGarage/pages/contacto.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/VentaDeGarage/pages/register.html">Registro</a>
+        </li>
+        
+      </ul>
+    </nav>
+  
+    <nav class="nav-right">
+  <ul>
+    <li>
+      <a href="#" class="icon">
+        <img src="/VentaDeGarage/assets/icons/shopping-cart.png" alt="icono de carrito de compras" class="" height="30px">
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/VentaDeGarage/pages/usuarios.html">UserName</a>
+    </li>
+    <li>
+      <a href="#" class="icon">
+        <img src="/VentaDeGarage/assets/icons/user-image-with-black-background.png" alt="icono de usuario" class="" height="30px">
+      </a>
+    </li>
+  </ul>
+  
+    </nav>
+  
+  </div>
+<main id="register-page">
 
-  <nav class="nav-right">
-<ul>
-  <li>
-    <a href="#" class="icon">
-      <img src="/VentaDeGarage/assets/icons/shopping-cart.png" alt="icono de carrito de compras" class="" height="30px">
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/VentaDeGarage/pages/usuarios.html">UserName</a>
-  </li>
-  <li>
-    <a href="#" class="icon">
-      <img src="/VentaDeGarage/assets/icons/user-image-with-black-background.png" alt="icono de usuario" class="" height="30px">
-    </a>
-  </li>
-</ul>
+  <h1>Registro</h1>
 
-  </nav>
+  <form id="register" class="input-wrapper">
 
-</div>
+      <div >
+          <label for="inputName">Nombre Completo</label><br>
+          <input  type="text" 
+                  name="nombreCompleto" 
+                  id="inputName" 
+                  placeholder="John Doe"
+                  minlength="5"
+                  maxlength="60"
+                  required
+                  pattern="^[a-zA-Z]+( [a-zA-Z]+)*$"
+                  autofocus
+                  value="Valor por defecto"
+                  
+          >
+      </div>
 
+      <div>
+          <label for="inputCorreo">Correo Electrónico</label>
+          <input  type="email" 
+                  name="correo" 
+                  id="inputCorreo" 
+                  minlength="7"
+                  maxlength="140"
+                  placeholder="johndoe@proton.mail"
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$"
+                  required>
+      </div>
+
+      <div>
+          <label for="inputPwd">Contraseña</label>
+          <input type="password" name="contraseña" id="inputPwd" required
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          value="Alfab3ta"
+          title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+          <!-- <span style="color: crimson">La Contraseña no cumple con los requisitos establecidos</span> -->
+      </div>
+      <div>
+        <label for="inputPwd">Repetir Contraseña</label>
+        <input type="password" name="contraseña" id="inputPwd" required
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        value="Alfab3ta"
+        title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+    </div>
+
+      <div>
+          <label for="">Fecha Nacimiento</label>
+          <input type="date" name="fechaNacimiento" min="1910-07-18" max="2023-01-01">
+      </div>
+
+      <div>
+          <label for="inputPais">Seleccione su provincia</label> <br>
+          <select name="pais" id="inputPais" required>
+              <option value=""></option>
+              <option value="4d3bf88e-50ad-4b5e-ad57-78fb718fbc00">Buenos Aires</option>
+              <option value="catamarca">Catamarca</option>
+              <option value="chaco">Chaco</option>
+              <option value="chubut">Chubut</option>
+              <option value="cordoba">Cordoba</option>
+              <option value="corrientes">Corrientes</option>
+              <option value="entre_rios">Entre Rios</option>
+              <option value="formosa">Formosa</option>
+              <option value="jujuy">Jujuy</option>
+              <option value="la_pampa">La Pampa</option>
+              <option value="la_rioja">La Rioja</option>
+              <option value="mendoza">Mendoza</option>
+              <option value="misiones">Misiones</option>
+              <option value="neuquen">Neuquen</option>
+              <option value="rio_negro">Rio Negro</option>
+              <option value="salta">Salta</option>
+              <option value="san_juan">San Juan</option>
+              <option value="san_luis">San Luis</option>
+              <option value="santa_cruz">Santa Cruz</option>
+              <option value="santa_fe">Santa Fe</option>
+              <option value="stgo_del_estero">Santiago del Estero</option>
+              <option value="tierra_del_fuego">Tierra del Fuego</option>
+              <option value="tucuman">Tucuman</option>
+          </select>
+      </div>
+
+      <div>
+          <label for="">Observaciones</label>
+          <textarea name="observacion" id="" cols="50" rows="4">
+          </textarea>
+      </div>
+
+
+      <div>
+          <button type="submit">Registrarse</button>
+      </div>
+</form>
+
+  <script>
+      const form = document.getElementById('register');
+      form.addEventListener('submit',  (e) => {
+          e.preventDefault()
+          alert('Formulario enviado')
+      })
+  </script>
+
+</main>
 
     <!-- FOOTER -->
     <footer class="footer shadow-top">
