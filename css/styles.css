@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Neucha&family=Roboto:wght@300;400&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+  --light-shades: #FBFAFA;
+  --light-accent: #BE7349;
+  --primary-color: #BDA482;
+  --secondary-color:  #7B7B7A;
+  --dark-shades: #304038;
+
+  --font-family: 'Handlee', cursive;
+  --font-family-titles: 'Tangerine', cursive;
+  --font-roboto: 'Roboto', sans-serif;
+  --padding-normal: 1rem;
+  --margin-align: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* width: 100dvw; */
+}
+
+body {
+  margin-top: 200px;
+  font-family: var(--font-family);
+  color: var(--light-shades);
+  background-color: var(--dark-shades);
+  /* min-height: 150vh;  */
+    display: flex;
+    flex-direction: column;
+  }
+
+/* SHADOWS */
+.shadow-top {
+  -webkit-box-shadow: 3px 0px 10px #777;
+  -moz-box-shadow: 3px 0 10px #777;
+  box-shadow: 3px 0 10px #777;
+}
+
+.shadow-bottom{
+  -webkit-box-shadow: 0 3px 10px #777;
+  -moz-box-shadow: 0 3px 10px #777;
+  box-shadow: 0 3px 10px #777;
+}
+
+/* HAMBURGER MENU */
+
+
+/* NAV */
+.nav-wrapper {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo-link {
+  padding:10px;
+}
+.nav-wrapper a {
+  text-decoration: none;
+  color: var(--light-shades);
+  transition: 300ms;
+}
+
+.nav-wrapper a:hover {
+  color: var(--light-accent);
+ 
+}
+
+.nav-wrapper, .nav-left, .nav-list, .nav-right, .nav-right ul {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-list {
+  flex-flow: column;
+}
+
+.nav-item {
+  margin: 4% 0;
+}
+
+.nav-item, li {
+padding: 0 25px;
+list-style: none;
+font-size: 1.5rem;
+}
+
+
+/* BANNER */
+.banner {
+height: 80dvh;
+background-image: url(/proyecto/assets/img/pexels-min-an-1087727.jpeg);
+background-size: cover;
+background-position: center;
+max-height: 60vh;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-bottom: 5%;
+box-sizing: border-box;
+/* otra opcion era probar con object-fit:cover */
+}
+
+#title-wrapper {
+  height: 20%;
+  width: 80%;
+  background-color: #777777c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+}
+
+/* MAIN PRODUCTS */
+#products-section {
+background-color: var(--light-shades);
+color: var(--dark-shades);
+
+}
+
+#products-wrapper {
+  padding: 1%;
+}
+
+#articles-wrapper {
+  margin: 1%
+}
+
+h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+.product-title {
+  width: 50%;
+  padding: 1% 2%;
+  border-bottom: 3px solid var(--light-accent);
+}
+
+.product-description {
+  padding: 5%;
+}
+
+.card-bottom {
+  margin: 5% 1% 10% 1%;  
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 2%;
+
+}
+
+.card-button {
+  background-color:#BDA482;
+  width: 100px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color:#FBFAFA;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 18px;
+  transition: .24s;
+  margin: 2%; 
+}
+
+.price {
+  font-weight: bolder;
+}
+
+.card-button:hover {
+  background-color: #304038;
+  color:#FBFAFA;
+
+}
+
+.category {
+  line-height: 2.rem;
+width: 30%;
+  border-bottom: 3px solid var(--dark-shades);
+}
+
+#cards-wrapper {
+  margin: 1% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.product-card {
+width: 100%;
+margin: 2%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.img-box {
+  height: 40%;
+  box-sizing: border-box;
+  border-top: #304038;
+
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow: hidden;
+  /* width: 400px;
+  ; 
+  border-radius: 25px;
+  z-index: 1;
+  box-sizing: border-box; */
+}
+
+/* objet fit cover es el analigo a background-size cover pero para imagenes vs la otra opcion es para background img */
+.img {
+
+  height: 100%;
+  object-fit: cover;
+  object-position: center;  
+}
+
+
+/* CONTACT PAGE */
+.main-contact {
+  display: flex;
+  align-items: center; 
+}
+
+.section-contact {
+background-color: var(--dark-shades);
+display: flex;
+flex-direction: column;
+width: 100%; 
+margin: 10vh 5vw; 
+height: fit-content;
+padding-bottom: 10vh;
+}
+
+.contact-form-container {
+  color: var(--secondary-color);
+  
+/* margin-bottom: 5vh; */
+   flex: 1 1 0%; 
+}
+
+.contact-form {
+  justify-content: center;
+}
+
+.contact-map {
+  margin-top: 40px;
+  height: 60vh;
+  /* min-height: 80dvh; */
+  /* flex: 1 1 500%;
+  height: ; */
+}
+
+
+.contact-wrapper {
+  padding: 1rem 2rem;
+
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+
+.p-0 {
+  padding: 0;
+}
+.p-1 {
+  padding: .5rem;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* CARDS WITH SHADOW */
+
+.card {
+background-color: var(--light-shades);
+  border-radius: 25px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  z-index: 0; 
+}
+
+.card:hover {
+  box-shadow: 0 20px 60px 0 rgba(0,0,0,.4);
+  -webkit-transform: translate(0,-10px);
+  transform: translate(0,-10px);
+}
+
+/* BANNER BOTTOM */
+#banner-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+   min-height: 35vh; 
+  justify-content: space-evenly;
+  background-color: var(--primary-color); 
+   margin: 10vh 0; 
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.box-img{
+    object-fit: cover;
+}
+
+#box-2 {
+  background-color: #b8ab99;
+  /* width: 33%;
+  height: 100%; */
+  /* padding: 1; */
+}
+
+
+/* FOOTER */
+
+ footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2vh 0;
+} 
+footer h3 {
+  margin-bottom: 5%;
+}
+footer ul li {
+  margin: 5% 0;
+}
+
+.box p a {
+  text-decoration: none;
+  color: var(--light-shades)
+}
+
+/* .box p a:hover {
+  text-decoration:underline;
+  color: var(--primary-color)
+} */
+
+/* MEDIA QUERIES */
+/* MEDIUM SIZE */
+@media screen and (width > 720px) {
+  .nav-item li {
+    padding: 0 10px;
+    font-size: 0.75rem;
+    }
+
+    body {
+      margin-top: 0px;
+    }
+}
+
+/* LARGE SIZE */
+@media screen and (width > 1150px){
+
+  body {
+    margin-top: 50px;
+  }
+
+  .nav-wrapper {
+    justify-content: space-between;
+    padding: 0 2%;
+    height: 15%;
+    }
+
+    .nav-list {
+      flex-flow: row;
+    }
+
+  #title-wrapper {
+    width: 30%;
+  }
+
+  #cards-wrapper {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .product-card {
+    width: 25%;
+    height: 70vh;
+    }
+
+.section-contact {
+    flex-direction: row;
+    margin: 15vh 2.5vw;
+    height: 70dvh;
+
+    }
+
+    .contact-map {
+      margin: 0 2.5vw;
+      width: 50%;
+    
+    }  
+
+footer, #banner-bottom {
+      flex-direction: row;
+    }
+  }
+
