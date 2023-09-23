@@ -22,6 +22,26 @@
 
 }
 
+h1, h2, h3, h4 {
+  text-transform: capitalize;
+  font-family: var(--font-family-titles);
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+/* NOSOTROS */
+
+#nosotros h1{
+  color: var(--dark-shades);
+  padding: 10%;
+}
+
+#nosotros {
+  margin-top: 150px;
+}
 body {
   margin-top: 200px;
   font-family: var(--font-family);
@@ -137,11 +157,7 @@ color: var(--dark-shades);
   margin: 1%
 }
 
-h1, h2, h3, h4 {
-  text-transform: capitalize;
-  font-family: var(--font-family-titles);
-  font-size: 2rem;
-}
+
 
 .product-title {
   width: 50%;
@@ -386,7 +402,9 @@ footer ul li {
   body {
     margin-top: 50px;
   }
-
+#nosotros{
+  margin-top: 300px;
+}
   .nav-wrapper {
     justify-content: space-between;
     padding: 0 2%;

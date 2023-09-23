@@ -17,17 +17,13 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 2%;
-width: 80%;
+width: 80vw;
 align-self: center; 
 }
 
 #register button {
   align-self: center; 
  
-}
-#register-page h1 {
-  text-transform: uppercase;
-  /* text-align: center; */
 }
 
 .form {
@@ -81,10 +77,24 @@ input::placeholder {
   color: #5d5b589f;
 }
 
-input:after {
-  content:" *";
-  display: block;
+/* .required input {
+  width: 90%;
 }
+.required {
+  color: #f44336;
+} */
+
+/* .input {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+} */
+
+.required::after {
+content:" *";
+color: red;
+display: inline;
+} 
 
 .submit-button {
   align-items: center;
@@ -107,7 +117,16 @@ button[type="submit"]:hover {
 
 }
 
+@media screen and (width > 720px) {
+  #register div{
+    width: 80%;
+  
+    }
+}
+
 @media screen and (width > 1150px){
+
+
 
   body {
     margin-top: 150px;
