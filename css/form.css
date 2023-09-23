@@ -1,3 +1,8 @@
+body {
+  background-color:#a0a09ed4;
+  margin-top: 300px;
+}
+
 .form {
   width: 100%;
 }
@@ -68,4 +73,11 @@ button[type="submit"]:hover {
   background-color: #304038;
   color:#FBFAFA;
 
+}
+
+@media screen and (width > 1150px){
+
+  body {
+    margin-top: 150px;
+  }
 }
