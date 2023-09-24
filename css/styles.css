@@ -32,16 +32,6 @@ h1 {
   font-size: 3rem;
 }
 
-/* NOSOTROS */
-
-#nosotros h1{
-  color: var(--dark-shades);
-  padding: 10%;
-}
-
-#nosotros {
-  margin-top: 150px;
-}
 body {
   margin-top: 200px;
   font-family: var(--font-family);
@@ -51,6 +41,47 @@ body {
     display: flex;
     flex-direction: column;
   }
+/* NOSOTROS */
+
+#nosotros {
+  /* text-align: center;  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin-top: 20vh;
+}
+#nosotros h1, #nosotros h2 {
+  text-align: center; 
+  margin: 1% 0;
+}
+
+#nosotros h1, #nosotros h2, #nosotros p{
+  color: var(--dark-shades);
+  padding: 1%;
+  /* margin-top: 10px; */
+}
+
+.sobre-mi {
+  margin-top: 2%;
+}
+
+#sobre-mi {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#my-img-box {
+margin-left: 5%;
+margin-bottom: 5%;
+  border-radius: 25px;
+  overflow: hidden;
+  object-fit: contain;
+}
+
 
 /* SHADOWS */
 .shadow-top {
@@ -240,7 +271,6 @@ justify-content: space-between;
 
 /* objet fit cover es el analigo a background-size cover pero para imagenes vs la otra opcion es para background img */
 .img {
-
   height: 100%;
   object-fit: cover;
   object-position: center;  
@@ -403,8 +433,16 @@ footer ul li {
     margin-top: 50px;
   }
 #nosotros{
-  margin-top: 300px;
+  margin-top: 10vh;
 }
+
+#sobre-mi {
+  flex-direction: row;
+  width: 80vw;
+}
+
+
+
   .nav-wrapper {
     justify-content: space-between;
     padding: 0 2%;
