@@ -77,9 +77,9 @@ body {
 #my-img-box {
 margin-left: 5%;
 margin-bottom: 5%;
-  border-radius: 25px;
   overflow: hidden;
-  object-fit: contain;
+object-fit: cover;
+object-position: bottom;
 }
 
 
@@ -359,7 +359,7 @@ background-color: var(--light-shades);
 /* BANNER BOTTOM */
 #banner-bottom {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   flex-direction: column;
    min-height: 35vh; 
   justify-content: space-evenly;
